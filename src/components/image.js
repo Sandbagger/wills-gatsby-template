@@ -1,24 +1,16 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import BackgroundImage from 'gatsby-background-image'
+import styled from 'styled-components'
 
-/*
- * This component is built using `gatsby-image` to automatically serve optimized
- * images with lazy loading and reduced file sizes. The image is loaded using a
- * `useStaticQuery`, which allows us to load the image from directly within this
- * component, rather than having to pass the image data down from pages.
- *
- * For more information, see the docs:
- * - `gatsby-image`: https://gatsby.dev/gatsby-image
- * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
- */
 
-const Image = () => {
+const HeroImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      heroImage: file(relativePath: { eq: "heroCropped.jpeg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 1200, height:) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -26,7 +18,22 @@ const Image = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <BackgroundImage Tag="section"
+  fluid={data.heroImage.childImageSharp.fluid}
+  backgroundColor={`#040e18`}
+  
+>
+<h1>Hello gatsby-background-image</h1>
+</BackgroundImage>
+ 
 }
+const StyledHeroImage = styled(HeroImage)`
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+`
 
-export default Image
+
+
+export default StyledHeroImage;
