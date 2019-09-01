@@ -1,18 +1,22 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from 'styled-components';
-import Layout from "../components/layout"
-import HeroImage from "../components/image"
-import SEO from "../components/seo"
+import { Link } from "gatsby";
+import React from "react";
+import { StyledHeroImage } from '../components/image';
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+
 require('react-dom');
 
-const IndexPage = () => (
+const IndexPage = () => {
+  
+  return (
   <Layout>
     <SEO title="Home" />
-    <HeroImage/>
-    
+    <StyledHeroImage>
+    <h1>Hello gatsby-background-image</h1>
+  </StyledHeroImage>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
+  }
 
-export default IndexPage
+export default IndexPage;
