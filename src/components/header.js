@@ -5,23 +5,25 @@ import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components';
 
 const Nav = styled.div`
-background-color: #fff;
+background-color: transparent;
 border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
-max-width: 1010px;
 padding: 26px 20px;
 width: 100%;
 display: flex;
 align-items: center;
 margin: 0 auto;
+position: fixed;
 `;
 
 const NavLeft = styled.div`
 width: 50%;
 text-align: left;
+color: white;
 `
 const NavRight = styled.div`
 width: 50%;
 text-align: right;
+color: white;
 `
 
 
