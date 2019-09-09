@@ -29,7 +29,11 @@ const HeroImage = ({ className }) => {
   fluid={[`linear-gradient(rgba(220, 15, 15, 0.35), rgba(4, 243, 67, 0.35))`, query]}
   className={className} 
   >
-    <h1>I'm a fullstack Javascript engineer called Will.</h1>
+    <div>
+      <h1>I'm a fullstack Javascript engineer called Will.</h1>
+      <h1>Hi.</h1>
+    </div>
+    
     
   </BackgroundImage>
   )
@@ -39,13 +43,21 @@ const StyledHeroImage = styled(HeroImage)`
   height: 100vh;
   position: relative;
   z-index: -1;
-  > h1 {
-    text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-bottom: 10%;
+  }
+  > div > h1 {
+    text-align: center;
     color: white;
+    
   }
 `
 
