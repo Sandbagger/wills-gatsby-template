@@ -23,7 +23,12 @@ color: white;
 const NavRight = styled.div`
 width: 50%;
 text-align: right;
-color: white;
+> div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
 `
 
 
@@ -31,7 +36,11 @@ const Header = ({ siteTitle }) => (
   <>
   <Nav>
     <NavLeft data-testid="logo">William Neal</NavLeft>
-    <NavRight>Nav items</NavRight>
+    <NavRight>
+      <div>
+      <Link data-testid="nav-item-home" to="/">Home</Link>
+      </div>
+      </NavRight>
   </Nav>
   </>
 )
