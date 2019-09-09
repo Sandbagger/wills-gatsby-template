@@ -30,7 +30,7 @@ color: white;
 const Header = ({ siteTitle }) => (
   <>
   <Nav>
-    <NavLeft>William Neal</NavLeft>
+    <NavLeft data-testid="logo">William Neal</NavLeft>
     <NavRight>Nav items</NavRight>
   </Nav>
   </>
