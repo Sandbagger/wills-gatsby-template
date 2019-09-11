@@ -12,7 +12,6 @@ const IndexPage = () => {
   <Layout>
     <SEO title="Home" />
     <StyledHeroImage/>
-    <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
   }
