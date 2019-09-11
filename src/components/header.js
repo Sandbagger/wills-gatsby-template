@@ -28,7 +28,10 @@ text-align: right;
   align-items: center;
   justify-content: center;
   color: white;
-}
+} 
+`
+const StyledLink = styled.div`
+text-decoration: none;  
 `
 
 
@@ -38,7 +41,7 @@ const Header = ({ siteTitle }) => (
     <NavLeft data-testid="logo">William Neal</NavLeft>
     <NavRight>
       <div>
-      <Link data-testid="nav-item-home" to="/">Home</Link>
+       <StyledLink data-testid="nav-item-home" to="/">Home</StyledLink>
       </div>
       </NavRight>
   </Nav>
