@@ -1,7 +1,7 @@
 {
-  "name": "william-neal-gatsby-portfolio",
+  "name": "wills-gatsby-template",
   "private": true,
-  "description": "A personal website made with Gatsby",
+  "description": "A repo with standard configuration that I like to use. Includes Jest, React Testing Libray, and styled components",
   "version": "0.1.0",
   "author": "William Neal <wneal_19@yahoo.co.uk>",
   "dependencies": {
