@@ -30,6 +30,16 @@ text-align: right;
   color: white;
 } 
 `
+const NavItemContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  & > * + * {
+    margin-left: 10px;
+  }
+`
+
 const StyledLink = styled.div`
 text-decoration: none;  
 `
@@ -39,16 +49,16 @@ const Header = ({ siteTitle }) => (
   <>
   <Nav>
     <NavLeft data-testid="logo">
-      <div>
-      <StyledLink data-testid="nav-item-1" to="/">item1</StyledLink>
-      <StyledLink data-testid="nav-item-2" to="/">item2</StyledLink>
-      </div>
+      <NavItemContainer>
+        <StyledLink data-testid="nav-item-1" to="/">item1</StyledLink>
+        <StyledLink data-testid="nav-item-2" to="/">item2</StyledLink>
+      </NavItemContainer>
     </NavLeft>
     <NavRight>
-      <div>
-       <StyledLink data-testid="nav-item-3" to="/">item3</StyledLink>
-       <StyledLink data-testid="nav-item-4" to="/">item4</StyledLink>
-      </div>
+      <NavItemContainer>
+        <StyledLink data-testid="nav-item-3" to="/">item3</StyledLink>
+         <StyledLink data-testid="nav-item-4" to="/">item4</StyledLink>
+       </NavItemContainer>
       </NavRight>
   </Nav>
   </>
