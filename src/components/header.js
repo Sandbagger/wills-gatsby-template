@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components';
 
 const Nav = styled.div`
-background-color:#E0EEEE;
+background-color: transparent;
 border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
 padding: 26px 20px;
 width: 100%;
@@ -23,18 +23,12 @@ color: white;
 const NavRight = styled.div`
 width: 50%;
 text-align: right;
-> div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-} 
 `
 const NavItemContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: ${props => props.theme.primary};
   & > * + * {
     margin-left: 10px;
   }
@@ -43,8 +37,6 @@ const NavItemContainer = styled.div`
 const StyledLink = styled.div`
 text-decoration: none;  
 `
-
-
 const Header = ({ siteTitle }) => (
   <>
   <Nav>
