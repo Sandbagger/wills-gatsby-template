@@ -8,7 +8,7 @@ const useImageQuery = () => {
   const data = useStaticQuery(
     graphql`
     query {
-      heroImage: file(relativePath: { eq: "heroBlur2.png" }) {
+      heroImage: file(relativePath: { eq: "hero.png" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
@@ -30,11 +30,9 @@ const HeroImage = ({ className }) => {
   className={className} 
   >
     <div>
-      <h1>I'm a fullstack Javascript engineer called Will.</h1>
+      <h1>Some text to go in front of the image</h1>
       <h1>Hi.</h1>
     </div>
-    
-    
   </BackgroundImage>
   )
 }
