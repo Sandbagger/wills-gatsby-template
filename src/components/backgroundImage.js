@@ -25,13 +25,12 @@ const HeroImage = ({ className }) => {
   const query = useImageQuery();
   return (
   <BackgroundImage Tag="section"
-  fluid={[`linear-gradient(rgba(220, 15, 15, 0.35), rgba(4, 243, 67, 0.35))`, query]}
-  className={className} 
-  >
-    <div>
-      <h1>Some text to go in front of the image</h1>
-      <h2>Hi.</h2>
-    </div>
+    fluid={[`linear-gradient(rgba(220, 15, 15, 0.35), rgba(4, 243, 67, 0.35))`, query]}
+    className={className}>
+      <StyledContainer>
+       <h1>Some text to go in front of the image</h1>
+        <h2>Hi.</h2>
+      </StyledContainer>
   </BackgroundImage>
   )
 }
@@ -43,18 +42,17 @@ const StyledHeroImage = styled(HeroImage)`
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    position: absolute;
-    padding-bottom: 10%;
-  }
-  > div > h1, h2 {
+`
+const StyledContainer = styled.div`
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: flex-end;
+ position: absolute;
+ padding-bottom: 10%;
+  & > h1, h2 {
     text-align: center;
-    color: white;
-    
+    color: ${props => props.theme.primary};
   }
 `
 
