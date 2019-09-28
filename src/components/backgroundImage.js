@@ -31,7 +31,7 @@ const HeroImage = ({ className }) => {
   >
     <div>
       <h1>Some text to go in front of the image</h1>
-      <h1>Hi.</h1>
+      <h2>Hi.</h2>
     </div>
   </BackgroundImage>
   )
@@ -52,7 +52,7 @@ const StyledHeroImage = styled(HeroImage)`
     position: absolute;
     padding-bottom: 10%;
   }
-  > div > h1 {
+  > div > h1, h2 {
     text-align: center;
     color: white;
     
