@@ -1,0 +1,56 @@
+[
+    {
+      "name": "Vodex",
+      "catagory": "one",
+      "logo": "images/gatsby-astronaut.png"
+    },
+    {
+      "name": "two Cutie",
+      "catagory": "two",
+      "logo": "images/gatsby-astronaut.png"
+    },
+  
+    {
+      "name": "Dermanc",
+      "catagory": "two",
+      "logo": "images/gatsby-astronaut.png"
+    },
+    {
+      "name": "Evans Electrical",
+      "catagory": "one",
+      "logo": "images/gatsby-astronaut.png"
+    },
+  
+    {
+      "name": "two Works",
+      "catagory": "two",
+      "logo": "images/gatsby-astronaut.png"
+    },
+    {
+      "name": "AMC",
+      "catagory": "one",
+      "logo": "images/gatsby-astronaut.png"
+    },
+  
+    {
+      "name": "Nadine Merabi",
+      "catagory": "three",
+      "logo": "images/gatsby-astronaut.png"
+    },
+    {
+      "name": "Skins & Needles",
+      "catagory": "three",
+      "logo": "images/gatsby-astronaut.png"
+    },
+    {
+      "name": "Aimees",
+      "catagory": "two",
+      "logo": "images/gatsby-astronaut.png"
+    },
+    {
+      "name": "Boda Skins",
+      "catagory": "three",
+      "logo": "images/gatsby-astronaut.png"
+    }
+  ]
+  
