@@ -3,14 +3,8 @@ import { StyledHeroImage } from '../components/BackgroundImage';
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import  { ThemeProvider } from 'styled-components';
-
+import { theme } from '../theme'
 require('react-dom');
-
-const theme = {
-  primary: '#0B3954', 
-  secondary: '#BFD7EA',
-  background: 'FEFFFE'
-}
 
 const IndexPage = () => {
   
