@@ -42,8 +42,8 @@ const Header = ({ siteTitle }) => (
   <Nav>
     <NavLeft data-testid="logo">
       <NavItemContainer>
-        <StyledLink data-testid="nav-item-1" to="/">item1</StyledLink>
-        <StyledLink data-testid="nav-item-2" to="/">item2</StyledLink>
+        <StyledLink data-testid="nav-item-1" to="/">page1</StyledLink>
+        <StyledLink data-testid="nav-item-2" to="/page-2">page2</StyledLink>
       </NavItemContainer>
     </NavLeft>
     <NavRight>
