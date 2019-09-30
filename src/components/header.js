@@ -3,9 +3,10 @@ import PropTypes from "prop-types"
 import React from "react"
 import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components';
+import { theme } from '../theme';
 
 const Nav = styled.div`
-background-color: transparent;
+background-color: ${theme.background};
 border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
 padding: 26px 20px;
 width: 100%;
@@ -13,12 +14,13 @@ display: flex;
 align-items: center;
 margin: 0 auto;
 position: fixed;
+z-index: 10;
+top: 0;
 `;
 
 const NavLeft = styled.div`
 width: 50%;
 text-align: left;
-color: white;
 `
 const NavRight = styled.div`
 width: 50%;
@@ -28,6 +30,9 @@ const NavItemContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  &:before {
+    filter: blur(10px)
+  };
   color: ${props => props.theme.primary};
   & > * + * {
     margin-left: 10px;
