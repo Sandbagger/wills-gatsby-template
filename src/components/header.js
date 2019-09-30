@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { theme } from '../theme';
 
 const Nav = styled.div`
-background-color: ${theme.background};
+background-color: white;
 border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
 padding: 26px 20px;
 width: 100%;
