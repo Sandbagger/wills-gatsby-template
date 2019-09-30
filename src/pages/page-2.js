@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-import {Categories} from "../components/Categories";
-import {Items} from "../components/Items"
+import { Pill } from "../components/Pill";
+import { Items } from "../components/Items"
 import styled from 'styled-components';
 import SEO from "../components/seo";
 import  { ThemeProvider } from 'styled-components';
@@ -21,6 +21,9 @@ display: flex;
 justify-content: center;
 justify-items: center;
 align-items: center;
+& > div {
+  color: ${theme.secondary}
+}
 `
 const Grid = styled.div`
 display: grid;
@@ -35,6 +38,9 @@ const SecondPage = ({ data }) => {
 const [filteredItems, setFilteredItems] = useState(items);
  const catagories = new Set([...items.map(item => item.catagory)]);
  const filterItems = catagory => items.filter(catagory => items.catagory === catagory)
+ const handleFilter = catagory => catagory === 'All' ? setFilteredItems(items) : setFilteredItems(items.filter(i => i.catagory === catagory ));
+
+
  console.log('items', items, catagories, filteredItems) 
   return (
     <ThemeProvider theme={theme}>
@@ -44,7 +50,7 @@ const [filteredItems, setFilteredItems] = useState(items);
     <Container>
         <Flex>
           <div>Suggested catagories:</div>
-          <Categories items={[...catagories]}/>
+          {[...catagories, 'All'].map((catagory, i) => <Pill key={i} onClick={() => handleFilter(catagory)}>{catagory}</Pill>)}
         </Flex>
     
       <Grid>
@@ -77,6 +83,5 @@ const [filteredItems, setFilteredItems] = useState(items);
     }
   }
   `
-
 
 export default SecondPage
