@@ -6,12 +6,15 @@ import {Items} from "../components/Items"
 import styled from 'styled-components';
 import SEO from "../components/seo";
 import  { ThemeProvider } from 'styled-components';
-import { theme } from '../theme'
+import { theme } from '../theme';
 
 const Container = styled.div`
-display: flex;
 padding-top: 100px;
+display: flex;
 flex-direction: column;
+justify-content: center;
+justify-items: center;
+align-items: center;
 `
 const Flex = styled.div`
 display: flex;
@@ -22,8 +25,9 @@ align-items: center;
 const Grid = styled.div`
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-grid-gap: 1rem;
-align-items: center;
+grid-gap: 3rem;
+justify-content: center;
+width: 80%;
 `
 
 const SecondPage = ({ data }) => {
